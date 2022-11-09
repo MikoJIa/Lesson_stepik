@@ -27,7 +27,7 @@ import math
 # a = max(1, 2, abs(-3), -10)
 # print(a)
 # c = max(1, 2, abs(min(10, 5, -3)), -10)
-# # print(c)
+# print(c)
 #
 # # math.ceil возвращяет до наибольшего целого
 # a = math.ceil(5.2)
