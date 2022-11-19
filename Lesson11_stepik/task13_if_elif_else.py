@@ -30,4 +30,28 @@ if sum(days_of_the_month) != year:
     else:
         if m in [0,1,2,7] and 31 <= n < 33:
             print(f'{days_of_the_month[m]}.{days[n-1]} {days_of_the_month[m+1]}.{days[n+1]}')
-
+# another solution
+days = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+mounth, day = map(int, input().split())
+if day == 1:
+    prev_day = days[mounth - 1]
+    prev_mounth = mounth - 1
+else:
+    prev_day = day - 1
+    prev_mounth = mounth
+if day == days[mounth - 1]:
+    next_day = 1
+    next_mounth = mounth + 1
+else:
+    next_day = day + 1
+    next_mounth = mounth
+print(f'{prev_mounth:02}.{prev_day:02} {next_mounth:02}.{next_day:02}')
+# another solution
+days = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+m, n = map(int, input().split())
+if n == 1:
+    print(f'{m - 1:02}.{days[m - 1]:02} {m:02}.{n + 1:02}')
+elif n == days[m-1]:
+    print(f'{m:02}.{n - 1:02} {m+1:02}.01')
+else:
+    print(f'{m:02}.{n - 1:02} {m:02}.{n + 1:02}')
