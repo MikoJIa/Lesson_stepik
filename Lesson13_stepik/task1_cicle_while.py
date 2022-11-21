@@ -11,3 +11,9 @@ while i <= m:
     l.append(i ** 2)
     i += 1
 print(*l)
+# another solution
+start, stop = map(int, input().split())
+i = start
+while i <= stop:
+    print(i ** 2, end=' ')
+    i += 1
