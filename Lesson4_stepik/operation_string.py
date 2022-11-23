@@ -7,7 +7,7 @@ print('hello python'[4])
 # Срезы строк
 print(s[1:3])
 print(s[:5])
-print(s[6:])
+print(s[-6:])
 print(s[2:10:2]) #lopt
 print(s[1::3]) # eoyo
 print(s[:5:3]) # hl
