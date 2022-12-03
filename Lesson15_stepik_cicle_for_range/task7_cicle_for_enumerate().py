@@ -22,7 +22,7 @@ for i in range(len(s) - 1):
 		print(i, end=' ')
 if count == 0:
 	print(-1)
-# enother solution
+#enother solution
 string = input().lower()
 
 if 'ра' in string:
