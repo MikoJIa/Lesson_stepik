@@ -25,28 +25,35 @@ for i in range(0, len(lst)):
 
 print(*lst)
 # enother solution
-x = list(map(int,input().split()))
-for i in range(len(x)):
-    for j in range(i+1,len(x)):
-        if x[i] <= x[j]:
-            continue
-        else:
-            x[i],x[j] = x[j],x[i]
-print(*x)
-# enother solution
-l = list(map(int, input().split()))
-for i in range(len(l)):
-    for j in range(len(l)):
-        if l[i] < l[j]:
-            l[i], l[j] = l[j], l[i]
-print(*l)
+# x = list(map(int,input().split()))
+# for i in range(len(x)):
+#     for j in range(i+1,len(x)):
+#         if x[i] <= x[j]:
+#             continue
+#         else:
+#             x[i],x[j] = x[j],x[i]
+# print(*x)
+# # enother solution
+# l = list(map(int, input().split()))
+# for i in range(len(l)):
+#     for j in range(len(l)):
+#         if l[i] < l[j]:
+#             l[i], l[j] = l[j], l[i]
+# print(*l)
+# # enother solution
+# n = list(map(int, input().split()))
+# s = []
+# for i in range(len(n)):
+#     s.append(min(n))
+#     n.remove(min(n))
+# print(*s)
 # enother solution
 n = list(map(int, input().split()))
-s = []
 for i in range(len(n)):
-    s.append(min(n))
-    n.remove(min(n))
-print(*s)
+    for j, item in enumerate(n[:len(n)-i]):
+        if n[j] > n[j+1]:
+            n[j], n[j+1] = n[j+1], n[j]
+print(*n)
 
 
 
@@ -56,6 +63,6 @@ print(*s)
 
 
 
-# print(smallest, end=' ')
+
 
 
