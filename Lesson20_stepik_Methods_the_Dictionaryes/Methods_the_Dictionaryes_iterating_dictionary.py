@@ -51,7 +51,7 @@ print(d.values()) # dict_values([1, 'Ложь', [1, 2, 3]])
 print(d)                # {True: 1, False: 'Ложь', 'list': [1, 2, 3]}
 for x in d.values():
     print(x) # 1 Ложь [1, 2, 3]
-# А еслт мы хотим взять из словаря и ключи и значения, воспользуемся методом items()
+# А если мы хотим взять из словаря и ключи и значения, воспользуемся методом items()
 for i in d.items():
     print(i) # (True, 1) (False, 'Ложь') ('list', [1, 2, 3]) i будет у нас уже являтся кортежом(tuple)
 for key, value in d.items():
