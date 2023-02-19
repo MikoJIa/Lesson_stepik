@@ -10,3 +10,4 @@ a, b = map(int, input().split())
 c = math.sqrt(abs(pow(a, 2) + pow(b, 2)))
 print(float(round(c)))
 
+

@@ -49,7 +49,23 @@ import math
 # Округлите результат с точностью до сотых. Полученное значение выведите на экран.
 # Пример: input 3 4
 # output 5.0
+#
+# a, b = map(int, input('Введите два числа через пробел - ').split())
+# c = math.sqrt(abs(pow(a, 2) + pow(b, 2)))
+# print(round(c, 2))
 
-a, b = map(int, input('Введите два числа через пробел - ').split())
-c = math.sqrt(abs(pow(a, 2) + pow(b, 2)))
-print(round(c, 2))
+
+def counts(data):
+    s = []
+    count = 0
+    for i in range(len(data)-1):
+        if data[i] >= count:
+            s.append(data[i])
+            count = data[i]
+        else:
+            s.append(count)
+
+    return s
+
+
+print(counts([5, 5, 6, 5, 5, 5, 5, 6]))
