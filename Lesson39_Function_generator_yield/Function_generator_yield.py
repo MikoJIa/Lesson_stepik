@@ -44,3 +44,11 @@ print(next(gen))
 for x in squares():  # for в нутри себя обрабатывает Stopiteretion!!!!
     print(x)
 print('=' * 20)
+
+
+def test():
+    yield from [int(x) ** 0.5 for x in range(20)]
+
+
+for i in test():
+    print(round(i, 2), end=' ')
